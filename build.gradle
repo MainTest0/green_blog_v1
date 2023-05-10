@@ -21,7 +21,7 @@ repositories {
 dependencies {
 	// 의존성 추가 설정 start
 	// 추가해야되는 것
-	// jasper(버전 지우면 최신버전으로 세팅됨
+	// jasper(버전 지우면 최신버전으로 세팅됨)
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 	// jstl
 	implementation 'javax.servlet:jstl'

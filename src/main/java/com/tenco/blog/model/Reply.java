@@ -18,22 +18,22 @@ public class Reply {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
+
 	@Column(nullable = false, length = 250)
 	private String content;
-	
+
 	// 어느 게시글에 작성된 리플인지
 	// Reply과 Board의 연관 관계는 N : 1
 	@ManyToOne
-	@JoinColumn(name="board_id")
+	@JoinColumn(name = "board_id")
 	private Board board;
-	
+
 	// 누가 작성한 리플인지
 	@ManyToOne
-	@JoinColumn(name="user_id")
+	@JoinColumn(name = "user_id")
 	private User user;
-	
+
 	@CreationTimestamp
 	private Timestamp createDate;
-	
+
 }
