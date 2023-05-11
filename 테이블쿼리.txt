@@ -1,0 +1,39 @@
+
+
+
+게시판 제목   유저id     내용 조회수 등록시간
+               (수정,삭제)
+
+찜 
+
+이미지 
+
+추천여행지 조회수 + 예매 많이한 순서
+
+
+
+===============================================
+
+-- 좋아요 테이블
+create table like_heart_tb(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    board_id int,
+    user_id varchar(50)
+);
+
+-- 사진 업로드 테이블
+create table image_file_tb(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    originname VARCHAR(100) not null,
+    filename VARCHAR(100) not null
+);
+
+-- 추천여행지 게시판 테이블
+create table recommand_board_tb(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    title varchar(50) not null,
+    user_id varchar(50) not null,
+    content text not null,
+    view_count int not null,
+    reg_time TIMESTAMP default current_timestamp
+);

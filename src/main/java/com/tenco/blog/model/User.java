@@ -19,6 +19,7 @@ import lombok.Data;
 @Entity
 @Data // 주의 || (Object Mapper가 파싱) 파싱 처리할 때 setter 반드시 있어야 한다.
 public class User {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
